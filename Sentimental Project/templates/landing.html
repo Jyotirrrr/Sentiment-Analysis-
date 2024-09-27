@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Sentiment Prediction</title>
+    <link rel="stylesheet" href="styles.css">   
+</head>
+<body>
+    <div class="hero-section">
+        <div class="container">
+            <h1>Understand the emotions behind the words. 😊</h1>
+            <p>Text sentiment prediction is a powerful tool that can help you understand the emotions and opinions expressed in your text data. This information can be used to improve your business in a number of ways.</p>
+        </div>
+    </div>
+
+    <div class="prediction-section">
+        <div class="container">
+            <h2>Text Sentiment Prediction</h2>
+
+            <form action="/predict" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="file">Upload your CSV file</label>
+                    <input type="file" id="file" name="file">
+                </div>
+
+                <div class="form-group">
+                    <label for="text">Text for Prediction</label>
+                    <textarea id="text" name="text" rows="4" placeholder="Enter your text here..."></textarea>
+                </div>
+
+                <button type="submit">Predict</button>
+            </form>
+
+            <div class="results">
+                <h3>Prediction Result</h3>
+                <div id="prediction-result"></div>
+
+                <h3>Graph Result</h3>
+                <div id="graph-result"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
